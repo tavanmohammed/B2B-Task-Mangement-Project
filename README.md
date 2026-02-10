@@ -1,4 +1,4 @@
-# B2B Management Platform
+# B2B Task Management Platform
 
 A full-stack **B2B SaaS application** built with **FastAPI** and **Clerk** for managing **authentication, organizations, memberships, roles, permissions, and subscription-based billing**.
 
