@@ -57,68 +57,6 @@ B2B project/
 └── README.md
 
 
----
-
-## Backend Setup
-
-```bash
-cd backend
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-
-
-Create backend/.env (do not commit):
-
-CLERK_SECRET_KEY=your_clerk_secret_key
-CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-FRONTEND_URL=http://localhost:5173
-
-
-Run the backend:
-
-uvicorn app.main:app --reload
-
-
-Backend runs on:
-
-http://localhost:8000
-
-Frontend Setup
-cd frontend
-npm install
-npm run dev
-
-
-Create frontend/.env:
-
-VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-VITE_API_URL=http://localhost:8000
-
-
-Frontend runs on:
-
-http://localhost:5173
-
-Authorization Flow
-
-User authenticates via Clerk
-
-Clerk issues a JWT with organization context
-
-Frontend sends the token to FastAPI
-
-FastAPI validates authentication, role, and permissions
-
-Subscription plan is checked before granting access
-
-Security
-
-Environment variables are excluded via .gitignore
-
-Secrets are never committed
-
-All authorization rules are enforced server-side
 
 <img width="1330" height="609" alt="Screenshot 2026-02-08 at 11 07 07 PM" src="https://github.com/user-attachments/assets/2372a6f7-23e2-4c3e-b5ae-2a1ac9dd4926" />
 <img width="1291" height="602" alt="Screenshot 2026-02-08 at 11 07 45 PM" src="https://github.com/user-attachments/assets/7aff766e-3b1d-47e1-9603-8c06dce9ee7e" />
